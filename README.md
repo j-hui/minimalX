@@ -49,14 +49,16 @@ However, you can manually override this behavior by specifying the
 dictionary that maps author names to initials, e.g.:
 
     AUTHOR_INITIALS_OVERRIDE = {
-        "Jane Doe": "DJ",
+        "Jane Doe": "JH",
     }
 
-    AUTHOR "Jane Doe" # initials = "DJ"
+    AUTHOR = "Jane Doe" # initials = "DJ"
 
 If minimalX fails to find any viable initials (for example, the author name
 does not contain any spaces and is not overridden in the configuration file),
-then it will default to using just the first character of the `AUTHOR` string.
+then it will default to just the first character of the `AUTHOR` string, e.g.:
+
+    AUTHOR = "J-Doe" # initials = "J"
 
 ### Contributions welcome!
 
