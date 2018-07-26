@@ -58,7 +58,15 @@
   <div class="w3-row w3-card w3-white">
     <header id=banner>
        <!-- AUTHOR INITIALS-->
-      <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
+      <a href="{{ SITEURL }}" id=logo title="Home">
+        {% if AUTHOR_INITIALS is defined and AUTHOR in AUTHOR_INITIALS %}
+          {{ AUTHOR_INITIALS[AUTHOR] }}
+        {% elif " " in AUTHOR %}
+          {{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}
+        {% else %}
+          {{ AUTHOR[0] }} 
+        {% endif %}
+      </a>
       <nav id="menu">
         <ul>
           {% if DISPLAY_PAGES_ON_MENU %}

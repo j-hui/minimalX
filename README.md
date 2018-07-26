@@ -35,6 +35,29 @@ Check the [Wiki](https://github.com/art1fa/minimalX/wiki).
 
 I wrote an [example article](http://fabianbloggt.de/minimalx-article-format.html) to show you how minimalX renders your articles. There are also some additional styling methods explained.
 
+#### Configuration
+
+You can tweak how minimalX detects initials from the author name.
+
+By default, minimalX will use a space character to delimit the author's name,
+and extract initials from the first two tokens, e.g.:
+
+    AUTHOR = "John Doe" # initials are "JD"
+
+However, you can manually override this behavior by specifying the
+`AUTHOR_INITIALS_OVERRIDE` variable in your Pelican configuration file, as a
+dictionary that maps author names to initials, e.g.:
+
+    AUTHOR_INITIALS_OVERRIDE = {
+        "Jane Doe": "DJ",
+    }
+
+    AUTHOR "Jane Doe" # initials = "DJ"
+
+If minimalX fails to find any viable initials (for example, the author name
+does not contain any spaces and is not overridden in the configuration file),
+then it will default to using just the first character of the `AUTHOR` string.
+
 ### Contributions welcome!
 
 This theme is far from perfect, so I'm going to further improve it. If you like this theme, don't hestitate to submit issues and pull requests - I'd love to get in touch with you all ;)
