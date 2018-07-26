@@ -52,7 +52,7 @@ dictionary that maps author names to initials, e.g.:
         "Jane Doe": "JH",
     }
 
-    AUTHOR = "Jane Doe" # initials = "DJ"
+    AUTHOR = "Jane Doe" # initials = "JH"
 
 If minimalX fails to find any viable initials (for example, the author name
 does not contain any spaces and is not overridden in the configuration file),
