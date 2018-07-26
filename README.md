@@ -44,11 +44,11 @@ and extract initials from the first two tokens, e.g.:
 
     AUTHOR = "John Doe" # initials are "JD"
 
-However, you can manually override this behavior by specifying the
-`AUTHOR_INITIALS_OVERRIDE` variable in your Pelican configuration file, as a
-dictionary that maps author names to initials, e.g.:
+However, you can override this behavior by specifying the `AUTHOR_INITIALS`
+variable in your Pelican configuration file, as a dictionary that maps author
+names to initials, e.g.:
 
-    AUTHOR_INITIALS_OVERRIDE = {
+    AUTHOR_INITIALS = {
         "Jane Doe": "JH",
     }
 
