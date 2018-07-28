@@ -93,76 +93,10 @@
 {% block content %}
 {% endblock %}
   <footer id="contentinfo">
-    <div id="blogroll" class="w3-row">
-        <div class="blogroll-block w3-col l3 m3 s6">
-            <div>
-                <h6>{{ _('Categories') }}</h6>
-                <ul>
-                    {% for category, articles in categories %}
-                    <li class=""><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}<a></li>
-                    {% endfor %}
-                    {% for number in range(4 - categories|count) %}
-                    <li class="empty"></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-        <h6>Top Tags</h6>
-        <ul>
-          <!-- Print the four most popular tags, sorted automatically with the setting TAG_CLOUD_SORTING = 'size' in pelicanconf.py -->
-          {% for tag in tag_cloud[:4] %}
-          <li class=""><a href="{{ SITEURL }}/{{ tag.0.url }}"> #{{ tag.0 }} ({{ tag.2 }})</a></li>
-          {% endfor %}
-          {% for number in range(4 - tag_cloud[:4]|count) %}
-          <li class="empty"></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-          <h6><a href="{{ SITEURL }}/authors.html">{{ _('Authors') }}</a></h6>
-          <ul>
-              <!-- {% if authors|count > 1 %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">Alle</a></li>
-              {% endif %} -->
-              {% for author, articles in authors %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">{{ author }}</a></li>
-              <!-- <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li> -->
-              {% endfor %} {% for number in range(4 - authors|count) %}
-              <li class="empty"></li>
-              {% endfor %}
-          </ul>
-      </div>
-    </div>
-      <div class="blogroll-block w3-col l3 m3 s6">
-          <div>
-              <h6>Social Media</h6>
-              <ul>
-                  {% for name, link in SOCIAL %}
-                  <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><span style="text-transform: capitalize;">{{ name }}</span> <i class="fa fa-{{ name }}"></i></a></li>
-                  {% endfor %}
-                  {% for number in range(4 - SOCIAL|count) %}
-                  <li class="empty"></li>
-                  {% endfor %}
-              </ul>
-          </div>
-      </div>
-    </div>
-    <div id="contact">
-        <ul>
-            <!--<li><a href="{{ SITEURL }}/legal.html">{{ _('About | Privacy') }}</a></li>-->
-        </ul>
-    </div>
     <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
         <span>
-            The opinions expressed on this website are my own.
-            They do not represent those of my employer.
-            <br>
-            Copyright © 2018 John Hui |
-            <a href="{{ SITEURL }}/pages/acknowledgements.html"><u>Site Acknowledgements</u></a>
+            The opinions expressed on this website are my own. They do not represent those of my employer.
+            <br> Copyright © 2018 John Hui | <a href="{{ SITEURL }}/pages/acknowledgements.html"><u>Site Acknowledgements</u></a>
     </div>
   </footer>
 {% if GOOGLE_ANALYTICS %}
