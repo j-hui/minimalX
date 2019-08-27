@@ -95,8 +95,10 @@
   <footer id="contentinfo">
     <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
         <span>
-            The opinions expressed on this website are my own. They do not represent those of my employer.
-            <br> Copyright © 2018 John Hui | <a href="{{ SITEURL }}/pages/acknowledgements.html"><u>Site Acknowledgements</u></a>
+            {{ FOOTER_NOTICE }}
+            <br>
+            Copyright © {{ FOOTER_COPYRIGHT }} |
+            <a href="{{ SITEURL }}/pages/acknowledgements.html"><u>Site Acknowledgements</u></a>
     </div>
   </footer>
 {% if GOOGLE_ANALYTICS %}
