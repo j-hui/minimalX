@@ -22,7 +22,7 @@
   {% endblock %}    
 {% endblock %}
 {% block content_title %}
-{% if articles_page.number == 1 %}
+{% if articles_page.number == 1 and SHOW_INTRODUCTION %}
 {% include 'introduction.html' %}
 {% endif %}
 {% endblock %}
