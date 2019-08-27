@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<main class="col-main w3-container w3-medium">
 <h1>Archives for {{ SITENAME }}</h1>
 
 <dl>
@@ -8,4 +9,7 @@
     <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
 {% endfor %}
 </dl>
+<br>
+
+</main>
 {% endblock %}

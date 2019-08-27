@@ -2,11 +2,14 @@
 
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
-{#
 {% block content %}
+<br>
+<main class="col-main w3-container w3-medium">
     <h1>Tags for {{ SITENAME }}</h1>
+    <br>
     {%- for tag, articles in tags|sort %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}
+    <br><br>
+</main>
 {% endblock %}
-#}
