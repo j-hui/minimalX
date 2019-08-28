@@ -76,9 +76,9 @@
           {% endif %}
 
           {% if DISPLAY_INDEX_ON_MENU %}
-          <li class="active">
-              <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">Index</a>
-          </li>
+          <li class="active"> <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">
+              {% if INDEX_NAME %} {{ INDEX_NAME }} {% else %} Index {% endif %}
+          </a> </li>
           {% endif %}
 
           {% if DISPLAY_CATEGORIES_ON_MENU %}
