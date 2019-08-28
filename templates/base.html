@@ -74,6 +74,13 @@
           <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
           {% endif %}
+
+          {% if DISPLAY_INDEX_ON_MENU %}
+          <li class="active">
+              <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">Index</a>
+          </li>
+          {% endif %}
+
           {% if DISPLAY_CATEGORIES_ON_MENU %}
           {% for cat, null in categories %}
           {% if cat != DEFAULT_CATEGORY %}
